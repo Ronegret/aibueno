@@ -1,0 +1,97 @@
+:root{
+  --bg:#0a0b0f; --bg-alt:#0f1117; --card:#14161d; --line:#23262f;
+  --txt:#e9eaee; --muted:#9aa0ab; --accent:#6c5ce7; --accent2:#00d4ff;
+  --radius:16px; --max:1120px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--txt);font-family:'Inter',system-ui,sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3,.brand{font-family:'Space Grotesk',sans-serif;line-height:1.1}
+a{color:inherit;text-decoration:none}
+.grad{background:linear-gradient(100deg,var(--accent2),var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* NAV */
+.nav{position:sticky;top:0;z-index:50;display:flex;align-items:center;gap:24px;
+  padding:16px clamp(16px,5vw,48px);background:rgba(10,11,15,.72);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.brand{font-weight:700;font-size:1.3rem;letter-spacing:-.5px}
+.brand span{color:var(--accent2)}
+.nav-links{display:flex;gap:22px;margin-left:auto;font-size:.92rem;color:var(--muted)}
+.nav-links a:hover{color:var(--txt)}
+@media(max-width:860px){.nav-links{display:none}}
+
+/* BUTTONS */
+.btn{display:inline-block;background:linear-gradient(100deg,var(--accent2),var(--accent));color:#fff;
+  font-weight:600;padding:13px 24px;border-radius:999px;border:0;cursor:pointer;font-size:.95rem;transition:transform .15s,filter .15s}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.08)}
+.btn-sm{padding:9px 18px;font-size:.85rem}
+.btn-ghost{background:transparent;border:1px solid var(--line);color:var(--txt)}
+
+/* HERO */
+.hero{position:relative;max-width:var(--max);margin:0 auto;padding:clamp(64px,12vw,140px) clamp(16px,5vw,48px) 80px;text-align:center;overflow:hidden}
+.hero-glow{position:absolute;top:-20%;left:50%;transform:translateX(-50%);width:680px;height:680px;max-width:90vw;
+  background:radial-gradient(circle,rgba(108,92,231,.33),transparent 62%);filter:blur(30px);z-index:-1}
+.eyebrow{text-transform:uppercase;letter-spacing:2px;font-size:.75rem;color:var(--muted);margin-bottom:22px}
+.hero h1{font-size:clamp(2.3rem,6.5vw,4.3rem);font-weight:700;letter-spacing:-1.5px}
+.lead{max-width:620px;margin:22px auto 0;color:var(--muted);font-size:clamp(1rem,2.4vw,1.2rem)}
+.hero-cta{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin:34px 0 46px}
+.stats{list-style:none;display:flex;gap:clamp(20px,5vw,60px);justify-content:center;flex-wrap:wrap}
+.stats strong{display:block;font-family:'Space Grotesk';font-size:1.7rem}
+.stats span{font-size:.8rem;color:var(--muted)}
+.logos{margin-top:46px;color:var(--muted);font-size:.8rem;letter-spacing:1px;opacity:.8}
+
+/* SECTIONS */
+.section{max-width:var(--max);margin:0 auto;padding:clamp(60px,9vw,110px) clamp(16px,5vw,48px);position:relative}
+.section.alt{background:var(--bg-alt)}
+.section.alt, .footer{max-width:none}
+.section.alt > *{max-width:var(--max);margin-left:auto;margin-right:auto}
+.num{font-family:'Space Grotesk';font-size:.85rem;color:var(--accent2);letter-spacing:2px}
+.section h2{font-size:clamp(1.8rem,4.5vw,2.8rem);margin:8px 0 10px;letter-spacing:-1px}
+.section-lead{color:var(--muted);margin-bottom:38px;max-width:620px}
+
+/* GRID / CARDS */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;transition:border-color .2s,transform .2s}
+.card:hover{border-color:var(--accent);transform:translateY(-3px)}
+.card h3{font-size:1.15rem;margin-bottom:8px}
+.card p{color:var(--muted);font-size:.93rem}
+.card .price{display:inline-block;margin-top:14px;font-size:.8rem;color:var(--accent2);border:1px solid var(--line);padding:4px 10px;border-radius:999px}
+.card.highlight{background:linear-gradient(135deg,rgba(108,92,231,.18),rgba(0,212,255,.08));border-color:var(--accent)}
+.pills{list-style:none;display:flex;gap:10px;flex-wrap:wrap;margin-top:24px}
+.pills li{font-size:.8rem;color:var(--muted);border:1px solid var(--line);padding:6px 14px;border-radius:999px}
+
+/* WORKS */
+.works .work{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:26px;min-height:150px;display:flex;flex-direction:column;justify-content:space-between;transition:transform .2s,border-color .2s}
+.works .work:hover{transform:translateY(-3px);border-color:var(--accent2)}
+.works .work span{font-size:.75rem;text-transform:uppercase;letter-spacing:1.5px;color:var(--accent2)}
+.works .work h3{font-size:1.1rem;margin-top:20px}
+
+/* STEPS */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.step{padding:26px;border-left:2px solid var(--accent)}
+.step strong{font-family:'Space Grotesk';font-size:1.6rem;color:var(--accent2)}
+.step h3{margin:10px 0 6px;font-size:1.1rem}
+.step p{color:var(--muted);font-size:.92rem}
+
+/* PRICING */
+.pricing .plan{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:28px;text-align:center}
+.pricing .plan.featured{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent),0 20px 50px -20px rgba(108,92,231,.6)}
+.plan .amount{font-family:'Space Grotesk';font-size:1.5rem;margin:12px 0;color:var(--accent2)}
+.plan p:last-child{color:var(--muted);font-size:.9rem}
+
+/* FAQ */
+.faq{max-width:760px}
+.faq details{border:1px solid var(--line);border-radius:12px;padding:16px 20px;margin-bottom:12px;background:var(--card)}
+.faq summary{cursor:pointer;font-weight:600;font-family:'Space Grotesk'}
+.faq p{color:var(--muted);margin-top:10px;font-size:.93rem}
+
+/* CONTACT */
+.contact-form{max-width:520px;display:flex;flex-direction:column;gap:12px;margin-bottom:28px}
+.contact-form input,.contact-form textarea{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:13px 16px;color:var(--txt);font:inherit}
+.contact-form input:focus,.contact-form textarea:focus{outline:none;border-color:var(--accent)}
+.form-note{color:var(--accent2);font-size:.88rem}
+.contact-info{display:flex;gap:24px;flex-wrap:wrap;color:var(--muted);font-size:.92rem}
+.contact-info a:hover{color:var(--accent2)}
+
+/* FOOTER */
+.footer{text-align:center;padding:40px 16px;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem}
+.footer .muted{opacity:.6;margin-top:6px}
