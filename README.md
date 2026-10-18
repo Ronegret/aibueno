@@ -4,7 +4,7 @@
 
 <a href="https://aibueno.es"><img src="https://img.shields.io/badge/🌐_Live_Demo-8B5CF6?style=for-the-badge" /></a>
 
-<a href="https://aibueno.es"><img width="85%" src="https://image.thum.io/get/width/900/crop/520/noanimate/https://aibueno.es" alt="AIbueno preview" /></a>
+<a href="https://aibueno.es"><img width="85%" src="https://image.thum.io/get/wait/8/width/900/crop/520/noanimate/https://aibueno.es" alt="AIbueno preview" /></a>
 
 </div>
 
